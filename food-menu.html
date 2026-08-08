@@ -1,172 +1,29 @@
-
-:root{
-  --bg:#090b0a;
-  --panel:#111713;
-  --cream:#f4efe4;
-  --green:#0d3b2a;
-  --green2:#164f39;
-  --gold:#d5a64c;
-  --gold2:#f0d58b;
-  --orange:#f36f21;
-  --red:#e94b35;
-  --white:#fff;
-  --muted:#b9c2bc;
-  --shadow:0 24px 70px rgba(0,0,0,.28);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:#171a18;line-height:1.65}
-img{display:block;max-width:100%}
-a{text-decoration:none;color:inherit}
-.container{width:min(1180px,calc(100% - 32px));margin:auto}
-.topbar{background:#050706;color:#efd99f;text-align:center;padding:8px 12px;font-size:.85rem;letter-spacing:.08em}
-.header{position:sticky;top:0;z-index:1000;background:rgba(7,15,11,.97);backdrop-filter:blur(10px);box-shadow:0 8px 32px rgba(0,0,0,.28)}
-.nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:22px}
-.brand{display:flex;align-items:center;gap:12px;color:#fff}
-.brand img{width:58px;height:58px;object-fit:contain;border-radius:50%}
-.brand strong{display:block;font-size:1.15rem;letter-spacing:.14em}
-.brand small{display:block;color:var(--gold2);font-size:.66rem;letter-spacing:.18em}
-.navlinks{display:flex;gap:20px;align-items:center;color:#fff;font-weight:800}
-.navlinks a:hover{color:var(--gold2)}
-.navbtn{background:linear-gradient(135deg,var(--gold),var(--orange));color:#130b05!important;padding:12px 18px;border-radius:999px}
-.menu-toggle{display:none;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:10px;font-size:1.3rem;padding:8px 12px}
-.hero{min-height:780px;position:relative;display:grid;place-items:center;color:#fff;text-align:center;overflow:hidden}
-.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(5,8,6,.24),rgba(5,8,6,.76)),linear-gradient(90deg,rgba(0,0,0,.4),transparent 48%,rgba(0,0,0,.28))}
-.hero-content{position:relative;z-index:2;max-width:900px;padding:90px 0}
-.hero-logo{width:min(230px,55vw);margin:0 auto 10px;filter:drop-shadow(0 14px 28px rgba(0,0,0,.45))}
-.kicker{text-transform:uppercase;letter-spacing:.25em;color:var(--gold2);font-weight:900;font-size:.76rem}
-.hero h1,.page-hero h1{font-family:Georgia,serif;font-size:clamp(4rem,10vw,8rem);line-height:.9;margin:.08em 0 .18em}
-.hero p{font-size:clamp(1.05rem,2vw,1.3rem);max-width:760px;margin:0 auto 28px}
-.buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
-.btn{display:inline-block;padding:15px 24px;border-radius:999px;font-weight:900;border:0;cursor:pointer}
-.btn-primary{background:linear-gradient(135deg,var(--gold),var(--orange));color:#150d06}
-.btn-outline{border:2px solid #fff;color:#fff}
-.btn-outline:hover{background:#fff;color:var(--green)}
-section{padding:92px 0}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.pill{display:inline-block;background:#eadbb7;color:#695019;border-radius:999px;padding:8px 14px;font-weight:900;font-size:.8rem}
-.display-title{font-family:Georgia,serif;color:var(--green);font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.04;margin:.3em 0}
-.image-card{position:relative;min-height:500px;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
-.image-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.soft{background:#e9dfce}
-.dark{background:radial-gradient(circle at 70% 15%,#332716,#0c1611 48%,#050706);color:#fff}
-.section-title{max-width:760px;margin:0 auto 48px;text-align:center}
-.section-title h2{font-family:Georgia,serif;color:var(--green);font-size:clamp(2.2rem,5vw,4.2rem);line-height:1.05;margin:.2em 0}
-.dark .section-title h2{color:#fff}
-.section-title p{color:#737a75}
-.dark .section-title p{color:#c9d2cc}
-.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.feature{background:#fff;border-radius:20px;padding:26px;text-align:center;box-shadow:0 14px 36px rgba(0,0,0,.1)}
-.dark .feature{background:rgba(255,255,255,.06);border:1px solid rgba(213,166,76,.25);box-shadow:none}
-.feature .icon{font-size:2.2rem}.feature h3{color:var(--green);margin:10px 0 5px}.dark .feature h3{color:var(--gold2)}
-.feature p{margin:0;color:#6d736f}.dark .feature p{color:#c6d0c9}
-.promo-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.promo{position:relative;min-height:520px;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
-.promo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.promo::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 25%,rgba(0,0,0,.88))}
-.promo-copy{position:absolute;z-index:2;left:28px;right:28px;bottom:28px;color:#fff}
-.promo-copy span{color:var(--gold2);font-size:.75rem;text-transform:uppercase;letter-spacing:.2em;font-weight:900}
-.promo-copy h3{font-family:Georgia,serif;font-size:2.5rem;margin:.1em 0}
-.page-hero{padding:120px 0 90px;text-align:center;color:#fff;position:relative;background-size:cover;background-position:center}
-.page-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(5,8,6,.45),rgba(5,8,6,.86))}
-.page-hero .container{position:relative;z-index:1}
-.page-hero p{max-width:720px;margin:auto;color:#dde5e0}
-.food-hero{background-image:url("../images/food-hero.png")}
-.drinks-hero{background-image:url("../images/drinks-hero.png")}
-.gallery-hero{background-image:url("../images/gallery-wide.png")}
-.menu-grid{columns:2 500px;column-gap:24px}
-.menu-panel{break-inside:avoid;background:#0e1511;color:#fff;border-radius:20px;padding:28px;margin:0 0 24px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.07)}
-.menu-panel h2{font-family:Georgia,serif;font-size:2rem;margin:0 0 18px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
-.menu-panel.green h2{border-color:#5d8a4d}.menu-panel.red h2{border-color:var(--red)}
-.menu-note{background:rgba(213,166,76,.12);border-left:3px solid var(--gold);padding:10px 12px;color:#eddcae}
-.menu-item{padding:14px 0;border-bottom:1px dashed rgba(255,255,255,.18)}
-.menu-item:last-child{border-bottom:0}
-.menu-line{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}
-.menu-line h3{margin:0;font-size:1rem;text-transform:uppercase;letter-spacing:.03em}
-.menu-line strong{color:var(--gold2);white-space:nowrap}
-.menu-item p{margin:5px 0 0;color:#cad2cd;font-size:.92rem}
-.gallery{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:230px;gap:18px}
-.gallery figure{position:relative;margin:0;overflow:hidden;border-radius:20px;box-shadow:var(--shadow)}
-.gallery img{width:100%;height:100%;object-fit:cover}
-.gallery figcaption{position:absolute;left:18px;bottom:15px;color:#fff;font-weight:900;text-shadow:0 2px 8px #000;z-index:2}
-.gallery figure::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.62))}
-.g1{grid-column:span 7;grid-row:span 2}.g2{grid-column:span 5;grid-row:span 2}.g3{grid-column:span 5;grid-row:span 2}.g4{grid-column:span 7;grid-row:span 2}.g5{grid-column:span 7;grid-row:span 2}.g6{grid-column:span 5;grid-row:span 2}
-.booking-wrap,.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px}
-.booking-info{background:linear-gradient(145deg,#0d3b2a,#071a12);color:#fff;border-radius:24px;padding:40px}
-.booking-info h2{font-family:Georgia,serif;font-size:3rem;line-height:1.05}
-.form-card,.contact-box{background:#fff;border-radius:24px;box-shadow:var(--shadow);padding:34px}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.full{grid-column:1/-1}
-label{display:block;font-weight:900;color:var(--green);margin-bottom:6px}
-input,select,textarea{width:100%;padding:14px 15px;border:1px solid #cfc7b7;border-radius:12px;font:inherit;background:#fffdf8}
-textarea{min-height:130px;resize:vertical}
-.contact-row{padding:16px 0;border-bottom:1px solid #eee5d6}.contact-row strong{display:block;color:var(--green)}
-.map{width:100%;height:420px;border:0;border-radius:22px}
-.footer{background:#050706;color:#d7ded9;padding:56px 0 24px}
-.footer-grid{display:grid;grid-template-columns:1.3fr .8fr .8fr .9fr;gap:28px}
-.footer img{width:100px}.footer h3{color:var(--gold2)}.footer a{color:#efd99f}
-.copy{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:.88rem}
-.whatsapp{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.3);z-index:999;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease}
-.whatsapp svg{width:34px;height:34px;display:block}
-.whatsapp:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 14px 36px rgba(0,0,0,.34)}
-.whatsapp::before{content:attr(data-tooltip);position:absolute;right:72px;top:50%;transform:translateY(-50%) translateX(8px);background:#111;color:#fff;padding:10px 13px;border-radius:10px;font-size:.85rem;font-weight:700;line-height:1.2;white-space:nowrap;opacity:0;visibility:hidden;pointer-events:none;transition:.18s ease;box-shadow:0 8px 22px rgba(0,0,0,.22)}
-.whatsapp::after{content:"";position:absolute;right:64px;top:50%;transform:translateY(-50%);border:7px solid transparent;border-left-color:#111;opacity:0;visibility:hidden;transition:.18s ease}
-.whatsapp:hover::before,.whatsapp:hover::after,.whatsapp:focus-visible::before,.whatsapp:focus-visible::after{opacity:1;visibility:visible}.whatsapp:hover::before,.whatsapp:focus-visible::before{transform:translateY(-50%) translateX(0)}
-@media(max-width:600px){.whatsapp{right:14px;bottom:14px;width:56px;height:56px}.whatsapp svg{width:32px;height:32px}.whatsapp::before,.whatsapp::after{display:none}}
-@media(max-width:920px){
-  .menu-toggle{display:block}
-  .navlinks{display:none;position:absolute;left:0;right:0;top:84px;background:#07110c;flex-direction:column;padding:22px}
-  .navlinks.open{display:flex}
-  .split,.booking-wrap,.contact-grid,.footer-grid{grid-template-columns:1fr}
-  .feature-grid{grid-template-columns:repeat(2,1fr)}
-  .promo-grid{grid-template-columns:1fr}
-  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:280px}
-  .gallery figure{grid-column:auto!important;grid-row:auto!important}
-}
-@media(max-width:600px){
-  section{padding:70px 0}
-  .hero{min-height:700px}
-  .feature-grid,.form-grid,.gallery{grid-template-columns:1fr}
-  .full{grid-column:auto}
-  .menu-grid{columns:1}
-  .promo{min-height:430px}
-  .gallery{grid-auto-rows:320px}
-  .brand small{display:none}
-}
-.field-help{display:block;margin-top:7px;color:#7a715f;min-height:1.2em}
-.booking-status{padding:0;border-radius:12px;line-height:1.5}.booking-status.success,.booking-status.error{padding:16px}.booking-status.success{background:#e6f5ea;color:#145b2e;border:1px solid #b9dfc3}.booking-status.error{background:#fff0ee;color:#8c251b;border:1px solid #efc5bf}
-button:disabled{opacity:.6;cursor:not-allowed}
-.admin-filter{display:flex;align-items:end;gap:12px;flex-wrap:wrap;background:#fff;padding:18px;border-radius:16px;box-shadow:var(--shadow);margin:24px 0}.admin-table-wrap{overflow:auto;background:#fff;border-radius:16px;box-shadow:var(--shadow)}.admin-table{width:100%;border-collapse:collapse;min-width:950px}.admin-table th,.admin-table td{padding:13px;border-bottom:1px solid #eee5d6;text-align:left;vertical-align:top}.admin-table th{background:#0d3b2a;color:#fff}.admin-cancel{border:0;background:#8c251b;color:#fff;padding:8px 10px;border-radius:8px;cursor:pointer}
-
-/* Rio Brasa live floor-plan admin */
-.admin-plan-card{margin:26px 0 34px;background:#fff;border-radius:22px;padding:24px;box-shadow:var(--shadow)}
-.admin-plan-head{display:flex;justify-content:space-between;gap:20px;align-items:end;flex-wrap:wrap}.admin-plan-head h2{margin:.2em 0;color:var(--green);font-family:Georgia,serif}.plan-filter{display:flex;gap:10px;align-items:end;flex-wrap:wrap}.plan-filter input{min-width:155px}.floor-legend{display:flex;gap:20px;flex-wrap:wrap;margin:18px 0;font-weight:700;color:#5b625e}.floor-legend span{display:flex;align-items:center;gap:8px}.dot{width:12px;height:12px;border-radius:50%;display:inline-block}.free-dot{background:#2e8b57}.busy-dot{background:#b83b2f}
-.floor-plan{display:grid;grid-template-columns:1.15fr .85fr;gap:22px}.room{position:relative;border:2px solid #e7ddca;border-radius:18px;padding:20px;background:#fbf8f1;min-height:440px}.room h3{margin:0 0 18px;color:var(--green);font-family:Georgia,serif}.floor-row{display:grid;gap:10px}.floor-row-top{grid-template-columns:repeat(6,1fr)}.floor-main-body{display:grid;grid-template-columns:1fr .85fr;gap:35px;margin-top:30px}.window-bank{display:flex;flex-direction:column;gap:28px}.floor-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}.bar-shape{min-height:280px;border-left:5px solid #5c4424;border-top:5px solid #5c4424;border-bottom:5px solid #5c4424;border-radius:18px 0 0 18px;display:grid;place-items:center;color:#5c4424;font-size:1.4rem;letter-spacing:.14em;background:#f0e4cc}.floor-table{min-height:74px;border-radius:12px;padding:10px;text-align:center;border:2px solid;display:flex;flex-direction:column;justify-content:center;transition:.2s}.floor-table strong{font-size:1.05rem}.floor-table small{display:block;opacity:.78}.floor-table span{display:block;font-size:.72rem;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.floor-table.free{background:#e9f6ee;border-color:#78b58f;color:#14552c}.floor-table.occupied{background:#fdebea;border-color:#d57970;color:#8b241c}.small-room-layout{display:grid;grid-template-columns:1fr 1fr;gap:34px;min-height:340px}.small-left{display:flex;flex-direction:column;gap:38px;justify-content:center}.small-right{display:flex;flex-direction:column;gap:10px}.small-bottom{grid-column:1/-1;max-width:150px;margin:0 auto;width:100%}
-@media(max-width:900px){.floor-plan{grid-template-columns:1fr}.floor-row-top{grid-template-columns:repeat(3,1fr)}.floor-main-body{grid-template-columns:1fr}.bar-shape{min-height:120px}.small-room-layout{grid-template-columns:1fr}.small-bottom{grid-column:auto}.admin-plan-head{align-items:stretch}.plan-filter{align-items:stretch}.plan-filter>div,.plan-filter input,.plan-filter button{width:100%}}
-
-/* Premium Shift4 booking landing page */
-.booking-hero{position:relative;min-height:520px;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden}
-.booking-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.booking-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,7,5,.36),rgba(3,7,5,.88)),linear-gradient(90deg,rgba(7,35,24,.42),transparent 60%)}
-.booking-hero-copy{position:relative;z-index:2;padding:100px 0 90px;max-width:850px}
-.booking-hero h1{font-family:Georgia,serif;font-size:clamp(3.4rem,8vw,6.7rem);line-height:.95;margin:.08em 0 .2em;text-shadow:0 8px 28px rgba(0,0,0,.32)}
-.booking-hero p{max-width:700px;margin:auto;font-size:1.12rem;color:#edf1ee}
-.booking-premium-section{background:linear-gradient(180deg,#f4efe4,#ece1cf)}
-.booking-premium-grid{display:grid;grid-template-columns:1fr .86fr;gap:48px;align-items:center}
-.booking-premium-info>p{font-size:1.06rem;max-width:650px;color:#4d554f}
-.booking-benefits{display:grid;gap:14px;margin:28px 0}
-.booking-benefit{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.62);border:1px solid rgba(13,59,42,.09);padding:16px 18px;border-radius:16px}
-.booking-benefit>span{width:30px;height:30px;flex:0 0 30px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:var(--gold2);font-weight:900}
-.booking-benefit strong{display:block;color:var(--green);font-size:1rem}.booking-benefit small{display:block;color:#6b726d;margin-top:2px;font-size:.88rem}
-.booking-hours-card{margin-top:26px;border-left:4px solid var(--gold);background:#0c1711;color:#fff;padding:19px 22px;border-radius:0 16px 16px 0}
-.booking-hours-card>strong{color:var(--gold2);font-family:Georgia,serif;font-size:1.25rem}.booking-hours-card p{display:flex;justify-content:space-between;gap:20px;margin:7px 0;color:#d9e0dc}.booking-hours-card span{color:#fff;font-weight:800;white-space:nowrap}
-.booking-action-card{position:relative;background:radial-gradient(circle at 50% 0%,#183b2b,#09110d 55%,#050706);border:1px solid rgba(213,166,76,.38);box-shadow:0 28px 70px rgba(15,18,16,.25);border-radius:28px;padding:44px 38px;text-align:center;color:#fff;overflow:hidden}
-.booking-action-card::before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;border:1px solid rgba(213,166,76,.12);top:-145px;right:-80px}
-.booking-card-logo{width:112px;height:112px;object-fit:contain;margin:0 auto 16px;filter:drop-shadow(0 12px 22px rgba(0,0,0,.35))}
-.booking-action-card h2{font-family:Georgia,serif;color:#fff;font-size:clamp(2.2rem,4vw,3.4rem);line-height:1.02;margin:.15em 0 .25em}.booking-action-card>p{color:#c9d1cc;max-width:470px;margin:0 auto 24px}
-.booking-main-btn{display:block;width:100%;font-size:1.03rem;letter-spacing:.02em;padding:17px 22px;box-shadow:0 12px 28px rgba(213,166,76,.18)}
-.booking-secure-note{font-size:.78rem;color:#aeb9b2;margin-top:12px}.booking-divider{display:flex;align-items:center;gap:12px;margin:24px 0 18px;color:#8f9993;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em}.booking-divider::before,.booking-divider::after{content:"";height:1px;background:rgba(255,255,255,.13);flex:1}
-.booking-help{font-size:.92rem;margin-bottom:14px!important}.booking-contact-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}.booking-contact-actions a{border:1px solid rgba(240,213,139,.42);border-radius:999px;padding:11px 13px;color:var(--gold2);font-weight:800;font-size:.88rem}.booking-contact-actions a:hover{background:rgba(213,166,76,.1)}
-.booking-note-section{padding:0 0 90px;background:#ece1cf}.booking-note{display:flex;align-items:center;gap:18px;background:#fff;border-radius:18px;padding:22px 26px;box-shadow:0 12px 34px rgba(0,0,0,.07)}.booking-note>div:first-child{font-size:2rem}.booking-note strong{color:var(--green)}.booking-note p{margin:2px 0 0;color:#657069}
-@media(max-width:920px){.booking-premium-grid{grid-template-columns:1fr}.booking-action-card{max-width:620px;width:100%;margin:auto}}
-@media(max-width:600px){.booking-hero{min-height:450px}.booking-hero-copy{padding:80px 0 70px}.booking-action-card{padding:34px 22px}.booking-contact-actions{grid-template-columns:1fr}.booking-hours-card p{display:block}.booking-hours-card span{display:block}.booking-note{align-items:flex-start}}
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Food Menu | Rio Brasa</title><link rel="stylesheet" href="assets/css/style.css"></head><body>
+<div class="topbar">Brazilian Steakhouse in Liversedge • Feel the Flame</div>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="assets/images/logo.png" alt="Rio Brasa logo">
+      <div><strong>RIO BRASA</strong><small>BRAZILIAN STEAKHOUSE</small></div>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav class="navlinks">
+      <a href="index.html">Home</a><a href="food-menu.html" class="active">Food Menu</a><a href="drinks.html">Drinks</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+      <a class="navbtn" href="booking.html">Book a Table</a>
+    </nav>
+  </div>
+</header>
+<section class="page-hero food-hero"><div class="container"><div class="kicker">Brazilian Steakhouse</div><h1>Food Menu</h1><p>Brazilian favourites, flame-grilled steaks, lunch and Sunday roast.</p></div></section>
+<section><div class="container menu-grid"><article class="menu-panel green"><h2>Starters</h2><div class="menu-item"><div class="menu-line"><h3>Rio Salad (V)</h3><strong>£7.95</strong></div><p>Mixed leaves, avocado, mango, red onion, cherry tomatoes, toasted almond and passion fruit dressing.</p></div><div class="menu-item"><div class="menu-line"><h3>Loaded Cajun Fries</h3><strong>£7.00</strong></div><p>With chorizo, aioli and spring onions.</p></div><div class="menu-item"><div class="menu-line"><h3>Brazilian Fish Goujons</h3><strong>£7.00</strong></div><p>Served with aioli.</p></div><div class="menu-item"><div class="menu-line"><h3>Slow Cooked Short Rib Croquettes</h3><strong>£8.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>Bruschetta di Pomodoro (V)</h3><strong>£5.00</strong></div><p>Tomato, onions, basil and balsamic glaze.</p></div><div class="menu-item"><div class="menu-line"><h3>Pita Bread & Hummus (V)</h3><strong>£6.00</strong></div></div></article><article class="menu-panel red"><h2>Brazilian Mains</h2><div class="menu-item"><div class="menu-line"><h3>Moqueca de Peixe</h3><strong>£17.95</strong></div><p>Brazilian fish stew cooked with coconut milk, dendê oil and coriander.</p></div><div class="menu-item"><div class="menu-line"><h3>Frango com Quiabo</h3><strong>£16.95</strong></div><p>Roast corn-fed chicken and okra stew served with cream polenta.</p></div><div class="menu-item"><div class="menu-line"><h3>Feijoada</h3><strong>£16.00</strong></div><p>Traditional Brazilian black beans and pork stew served with basmati rice, sautéed spring greens and farofa.</p></div><div class="menu-item"><div class="menu-line"><h3>Picanha na Chapa (Serves 2)</h3><strong>£38.00</strong></div><p>Traditional sizzling Brazilian steak served with fries, rice, garlic bread and peppercorn sauce.</p></div><div class="menu-item"><div class="menu-line"><h3>Cream Gorgonzola & Spinach Gnocchi (V)</h3><strong>£12.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>Roast Vegetable Risotto with Parmesan (V)</h3><strong>£12.00</strong></div></div></article><article class="menu-panel gold"><h2>From the Grill</h2><p class="menu-note">All served with rocket salad, choice of 1 side and 1 sauce.</p><div class="menu-item"><div class="menu-line"><h3>9oz Sirloin Steak</h3><strong>£22.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>9oz Rib Eye Steak</h3><strong>£26.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>8oz Flat Iron Steak</h3><strong>£15.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>9oz Rump Steak</h3><strong>£18.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>9oz Leg of Lamb Steak</h3><strong>£20.00</strong></div></div></article><article class="menu-panel green"><h2>Sides</h2><div class="menu-item"><div class="menu-line"><h3>Cassava Chips</h3><strong>£4.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>Fries</h3><strong>£4.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>Mash Potatoes</h3><strong>£4.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>Sautéed Greens</h3><strong>£4.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>Basmati Rice</h3><strong>£4.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>Garlic Mushroom</h3><strong>£4.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>Turmeric Cassava</h3><strong>£4.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>Garlic Bread</h3><strong>£4.00</strong></div></div></article><article class="menu-panel green"><h2>Lunch Menu</h2><div class="menu-item"><div class="menu-line"><h3>Steak Ciabatta Sandwich</h3><strong>£12.95</strong></div><p>Tender steak, red onions, lettuce and red wine jus.</p></div><div class="menu-item"><div class="menu-line"><h3>Chicken Club Sandwich</h3><strong>£10.00</strong></div><p>Ciabatta bread, grilled chicken breast, crispy pancetta, tomatoes, lettuce and avocado.</p></div><div class="menu-item"><div class="menu-line"><h3>Mozzarella Sandwich</h3><strong>£10.00</strong></div><p>Focaccia bread, pesto, sun-dried tomatoes and rocket salad.</p></div><div class="menu-item"><div class="menu-line"><h3>Rio Brasa Burger</h3><strong>£14.00</strong></div><p>Grilled pineapple, cheddar, crispy pancetta, caramelised onions, lettuce and chipotle aioli.</p></div></article><article class="menu-panel gold"><h2>Grilled Skewers</h2><p class="menu-note">All served with fries.</p><div class="menu-item"><div class="menu-line"><h3>Grilled Beef Fillet Skewer</h3><strong>£14.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>Grilled Chicken Skewer</h3><strong>£10.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>Grilled Pork Skewer</h3><strong>£10.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>Grilled Lamb Skewer</h3><strong>£11.95</strong></div></div></article><article class="menu-panel gold"><h2>Sauces</h2><div class="menu-item"><div class="menu-line"><h3>Peppercorn Sauce</h3><strong>£3.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>Chimichurri</h3><strong>£2.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>Red Wine Jus</h3><strong>£2.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>Diane Sauce</h3><strong>£3.00</strong></div></div><div class="menu-item"><div class="menu-line"><h3>Blue Cheese</h3><strong>£3.00</strong></div></div></article><article class="menu-panel gold"><h2>Sunday Roast</h2><p class="menu-note">All served with roast potatoes, glazed carrots, sautéed greens and red wine jus.</p><div class="menu-item"><div class="menu-line"><h3>Roast Sirloin of Beef</h3><strong>£22.95</strong></div><p>Yorkshire pudding and horseradish cream.</p></div><div class="menu-item"><div class="menu-line"><h3>Roast Corn-Fed Chicken</h3><strong>£17.95</strong></div><p>Yorkshire pudding and bread sauce.</p></div><div class="menu-item"><div class="menu-line"><h3>Roast Loin of Pork</h3><strong>£14.95</strong></div><p>Yorkshire pudding, lemon and honey sauce.</p></div><div class="menu-item"><div class="menu-line"><h3>Roast Leg of Lamb</h3><strong>£21.95</strong></div><p>Yorkshire pudding and mint sauce.</p></div></article></div></section>
+<a class="whatsapp" href="https://wa.me/447707077066?text=Hi%20Rio%20Brasa%21%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer" title="Contact us through WhatsApp" aria-label="Contact us through WhatsApp" data-tooltip="Contact us through WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M19.11 17.21c-.29-.15-1.73-.85-2-.95-.27-.1-.46-.15-.66.15-.19.29-.75.95-.92 1.14-.17.19-.34.22-.63.07-.29-.15-1.23-.45-2.34-1.45-.86-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.44-.51.15-.17.19-.29.29-.49.1-.19.05-.36-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.49-.66-.5h-.56c-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.44s1.05 2.83 1.2 3.03c.15.19 2.07 3.16 5.01 4.43.7.3 1.25.48 1.67.62.7.22 1.34.19 1.85.12.56-.08 1.73-.71 1.97-1.39.24-.68.24-1.27.17-1.39-.07-.12-.27-.19-.56-.34z"/><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.8 3.03 15.96c0 2.53.73 4.99 2.12 7.1L3 29l6.09-2.01a13.03 13.03 0 0 0 6.94 1.9h.01C23.22 28.89 29 23.09 29 15.94 29 8.79 23.22 3 16.04 3zm0 23.7h-.01a10.81 10.81 0 0 1-5.51-1.51l-.4-.24-3.61 1.19 1.21-3.51-.26-.41a10.69 10.69 0 0 1-1.65-5.72c0-5.91 4.82-10.72 10.75-10.72 5.92 0 10.74 4.81 10.74 10.72S21.96 26.7 16.04 26.7z"/></svg></a>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><img src="assets/images/logo.png" alt="Rio Brasa"><p>Brazilian-inspired grilled food, premium cocktails and warm hospitality in Liversedge.</p></div>
+    <div><h3>Explore</h3><p><a href="food-menu.html">Food Menu</a></p><p><a href="drinks.html">Drinks Menu</a></p><p><a href="gallery.html">Gallery</a></p></div>
+    <div><h3>Visit</h3><p>471 Halifax Road<br>Liversedge<br>WF15 8HU</p></div>
+    <div><h3>Contact</h3><p><a href="mailto:info@riobrasa.co.uk">info@riobrasa.co.uk</a></p><p><a href="tel:+447707077066">07707 077066</a></p><p><strong>Opening hours</strong><br>Monday–Friday: 5:00 PM–10:00 PM<br>Saturday–Sunday: 10:00 AM–10:00 PM</p></div>
+  </div>
+  <div class="container copy">© 2026 Rio Brasa. All rights reserved.</div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body></html>
