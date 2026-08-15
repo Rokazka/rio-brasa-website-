@@ -1,0 +1,29 @@
+RIO BRASA WEBSITE UPDATE - 13 AUGUST 2026
+
+UPDATED FILES
+- drinks.html
+- food-menu.html
+
+DRINKS CHANGES
+- Removed Pina Colada and Sex on the Beach from the core classic cocktail list.
+- Repriced and reordered classic cocktails.
+- Replaced old Rio Cocktails with 5 Rio Signature Cocktails.
+- Mocktails changed to £5.95.
+- Added Wine & Prosecco section.
+- Kept Sangria pitchers at £25 / £25 / £26.
+- Updated draught and bottled beer/cider prices.
+- Simplified Soft Drinks.
+- Simplified Spirits and updated 25ml prices.
+
+FOOD CHANGES
+- Repriced and improved descriptions for starters and Brazilian mains.
+- Removed Pita Bread & Hummus from starters.
+- Updated grill prices.
+- Updated skewer prices.
+- Updated Sunday Roast prices.
+- Added Little Brasa Kids Menu.
+- Sides remain £4.00.
+- Lunch Menu retained at existing prices because no revised lunch pricing was agreed.
+- Extra sauce prices retained from the original website.
+
+No changes were made to navigation, booking, gallery, contact page, index page, CSS or JavaScript.
